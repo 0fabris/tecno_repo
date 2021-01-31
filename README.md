@@ -1,4 +1,4 @@
-# ![EasyRSS Logo](/app/src/main/ic_launcher-playstore.png =100x) *EasyRSS* 
+# <img src="/app/src/main/ic_launcher-playstore.png" alt="EasyRSS Logo" width="100" height="100"> *EasyRSS* 
 
 **Versione:** 1.0
 
