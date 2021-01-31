@@ -1,4 +1,4 @@
-# *EasyRSS* ![EasyRSS Logo](/app/src/main/ic_launcher-playstore.png)
+# ![EasyRSS Logo](/app/src/main/ic_launcher-playstore.png =100x) *EasyRSS* 
 
 **Versione:** 1.0
 
@@ -16,7 +16,7 @@
 
 ## *Documentazione*
 
-[Documentazione](/docs/EasyRSS_Docs.docx)
+[Documentazione](../../raw/EasyRSS/docs/EasyRSS_Docs.docx)
 
 ---
 
