@@ -30,10 +30,19 @@ public class NewsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                this.finish(); //Chiudo activity
+                onBackPressed(); //Chiudo activity
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /**
+     * Evento OnBackPressed -> Chiudo Activity
+     */
+    @Override
+    public void onBackPressed() {
+        this.finish();
     }
 
     /**
@@ -66,6 +75,7 @@ public class NewsActivity extends AppCompatActivity {
 
         //Visualizzo informazioni RSSItem
         txtTitle.setText(rss.getTitle());
+
         //Visualizzo descrizione in formato HTML
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             txtBody.setText(Html.fromHtml(rss.getDescription(),Html.FROM_HTML_MODE_LEGACY));

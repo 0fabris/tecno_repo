@@ -24,6 +24,8 @@
     <!-- Settings Screen -->
     <string name="settings_choosetitle">Scegli un feed RSS</string>
     <string name="settings_addLink">Aggiungi Link</string>
+    <string name="settings_removeLink">Rimuovi Link</string>
+    <string name="settings_okFeedRemoved">Feed Rimosso!</string>
     <string name="settings_addedLink">Link Aggiunto!</string>
     <string name="settings_okFeedChoose">Feed Selezionato Correttamente!</string>
     <string name="settings_errorLink">Link non contiene le keyword rss, xml o feed!</string>

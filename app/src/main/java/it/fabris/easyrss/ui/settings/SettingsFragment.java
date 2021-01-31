@@ -42,6 +42,11 @@ public class SettingsFragment extends Fragment {
     protected Button btnaddLink;
 
     /**
+     * Elemento Grafico Rimuovi Link
+     */
+    protected Button removeLink;
+
+    /**
      * Elemento grafico Textview dove inserire il link
      */
     protected TextView txtLink;
@@ -64,7 +69,10 @@ public class SettingsFragment extends Fragment {
     private void checkInsertItem(){
         btnaddLink.setEnabled(spItems.getSelectedItemPosition() == 0);
         txtLink.setEnabled(spItems.getSelectedItemPosition() == 0);
+        removeLink.setEnabled(spItems.getSelectedItemPosition() != 0);
     }
+
+
 
     /**
      * Metodo OnCreateView
@@ -86,10 +94,10 @@ public class SettingsFragment extends Fragment {
         btnaddLink = (Button)root.findViewById(R.id.btn_addLink);
         spItems = (Spinner)root.findViewById(R.id.spin_links);
         txtLink = (TextView)root.findViewById(R.id.editTxt_addLink);
+        removeLink = (Button) root.findViewById(R.id.btn_removeLink);
 
         //Carico elementi spinner
         loadItems(root);
-
         //Se ho gia' scelto almeno una volta un link, preseleziono quello
         spItems.setSelection(spref.getInt(MainActivity.lastFeedKey),true);
         checkInsertItem();
@@ -118,7 +126,6 @@ public class SettingsFragment extends Fragment {
             //Rivisualizzo elementi nello spinner
             loadItems(v);
             spItems.setSelection(spref.getInt(MainActivity.lastFeedKey),true);
-            checkInsertItem();
         });
 
 
@@ -126,12 +133,11 @@ public class SettingsFragment extends Fragment {
         spItems.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                checkInsertItem();
-                //start the fragment with link
                 if(position != 0) {
                     spref.putInt(MainActivity.lastFeedKey,position);
-                    Toast.makeText(selectedItemView.getContext(), getString(R.string.settings_okFeedChoose), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), getString(R.string.settings_okFeedChoose), Toast.LENGTH_LONG).show();
                 }
+                checkInsertItem();
             }
 
             @Override
@@ -139,6 +145,21 @@ public class SettingsFragment extends Fragment {
                 checkInsertItem();
                 return;
             }
+        });
+
+        //Gestione rimozione link
+        removeLink.setOnClickListener((v)->{
+            int pos = spItems.getSelectedItemPosition()-1;
+            if(pos != -1){
+                ArrayList<String> items = spref.getListString(MainActivity.rssArrayKey);
+                items.remove(pos);
+                spref.putListString(MainActivity.rssArrayKey,items);
+                if(spref.getInt(MainActivity.lastFeedKey) >= pos)
+                    spref.putInt(MainActivity.lastFeedKey,items.size()-1);
+                Toast.makeText(getContext(), getString(R.string.settings_okFeedRemoved), Toast.LENGTH_LONG).show();
+            }
+            loadItems(v);
+            spItems.setSelection(spref.getInt(MainActivity.lastFeedKey)+1,true);
         });
         return root;
     }
