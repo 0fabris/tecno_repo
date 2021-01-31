@@ -1,0 +1,39 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">EasyRSS</string>
+    <string name="appname_sub_nav">Made by Fabris</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_settings">Impostazioni</string>
+
+    <string name="genError">Errore</string>
+    <string name="btn_cancel">Annulla</string>
+
+    <string name="welcomeBody">Sei pregato di inserire un link ad un feed RSS nelle impostazioni per poter leggere le tue notizie!</string>
+    <string name="welcomeTitle">Benvenuto!</string>
+
+    <!-- Home Screen -->
+    <string name="home_reloading">Aggiorno il Feed...</string>
+    <string name="home_updatedFeed">Feed Aggiornato!</string>
+    <string name="rss_parsingerror">Errore nel parsing della pagina!</string>
+
+
+    <!-- Settings Screen -->
+    <string name="settings_choosetitle">Scegli un feed RSS</string>
+    <string name="settings_addLink">Aggiungi Link</string>
+    <string name="settings_addedLink">Link Aggiunto!</string>
+    <string name="settings_okFeedChoose">Feed Selezionato Correttamente!</string>
+    <string name="settings_errorLink">Link non contiene le keyword rss, xml o feed!</string>
+
+    <!-- News Activity -->
+    <string name="news_missingCategory">Categoria sconosciuta</string>
+    <string name="news_missingPubDate">Data di Pubblicazione sconosciuta</string>
+    <string name="news_category">Categoria:</string>
+    <string name="news_pubDate">Data di Pubblicazione:</string>
+    <string name="news_shareLink">Condividi</string>
+    <string name="news_openLink">Scopri altro...</string>
+    <string name="news_sharedstring">Condiviso con</string>
+</resources>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EasyRSS" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <!--<item name="colorPrimary">@color/purple_500</item>-->
+        <item name="colorPrimary">@color/darkorange</item>
+        <item name="colorPrimaryVariant">@color/mainorange</item>
+        <item name="colorOnPrimary">@color/whitenat</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/bluelight</item>
+        <item name="colorSecondaryVariant">@color/blue1</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.EasyRSS.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.EasyRSS.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.EasyRSS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
