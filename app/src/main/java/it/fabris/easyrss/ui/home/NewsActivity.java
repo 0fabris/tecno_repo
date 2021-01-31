@@ -95,8 +95,9 @@ public class NewsActivity extends AppCompatActivity {
         btnShare.setOnClickListener((v)->{
             Uri uri = Uri.parse(rss.getLink()); // missing 'http://' will cause crashed
             Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
             intent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.news_sharedstring)+ " " + getString(R.string.app_name));
-            intent.putExtra(Intent.EXTRA_STREAM, uri);
+            intent.putExtra(Intent.EXTRA_SUBJECT, uri);
             v.getContext().startActivity(Intent.createChooser(intent,getString(R.string.news_shareLink)));
         });
 
