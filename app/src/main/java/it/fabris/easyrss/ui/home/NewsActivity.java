@@ -106,8 +106,7 @@ public class NewsActivity extends AppCompatActivity {
             Uri uri = Uri.parse(rss.getLink()); // missing 'http://' will cause crashed
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
-            intent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.news_sharedstring)+ " " + getString(R.string.app_name));
-            intent.putExtra(Intent.EXTRA_SUBJECT, uri);
+            intent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.news_sharedstring)+ " " + getString(R.string.app_name) + "\n" + rss.getLink());
             v.getContext().startActivity(Intent.createChooser(intent,getString(R.string.news_shareLink)));
         });
 
