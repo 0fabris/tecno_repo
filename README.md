@@ -10,7 +10,7 @@
 ---
 ## *Features*
 - APK Firmato
-- Prima Release => [Download](https://github.com/0fabris/tecno_repo/releases/download/1.0/EasyRSS-Signed.apk)
+- Prima Release => [Download](https://github.com/0fabris/tecno_repo/releases/download/1.0r1/EasyRSS-Signed.apk)
 
 ---
 
