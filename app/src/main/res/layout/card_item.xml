@@ -6,7 +6,8 @@
     android:layout_height="100dp"
     android:background="@drawable/card_border"
     android:clickable="true"
-    android:hapticFeedbackEnabled="true">
+    android:hapticFeedbackEnabled="true"
+    app:cardBackgroundColor="?attr/colorOnPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,14 +20,14 @@
             android:id="@+id/txtCardTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:gravity="center|left"
+            android:maxLines="1"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textSize="25dp"
-            android:maxLines="1"
-            android:textStyle="bold|italic"
-            android:ellipsize="end"
             android:singleLine="true"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"
             tools:text="Title" />
 
         <Space
@@ -37,13 +38,13 @@
             android:id="@+id/txtCardSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center|right"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:textStyle="italic"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:gravity="center|right"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:singleLine="true"
+            android:textStyle="italic"
             tools:text="subtitle" />
 
 

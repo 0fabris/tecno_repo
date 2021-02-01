@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/whitenat"
+    android:background="?attr/colorOnPrimary"
     tools:context=".ui.home.NewsActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="132dp"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="@android:color/black"
+        android:textColor="?attr/colorOnSecondary"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
         android:gravity="center"
         android:inputType="textMultiLine"
         android:isScrollContainer="true"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnSecondary"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
